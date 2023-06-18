@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+	<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title th:text="${titulo}"></title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<div class="barra">
+			<h1 class="titulo_p" th:text="${titulo}"></h1>	
+			<img th:src="@{/img/logo-medium.png}" width="90" height="45"></img>	
+		</div>		
+		
+		<div class="contenedor">
+			<table id="tabla">
+			<thead>
+				<tr>
+					<th>
+						Orden de venta
+					</th>
+					<th>
+						Cliente
+					</th>
+					<th>
+						Total
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="fila:${lventas}">
+					<td id="ov_id" ><a th:text="${fila.IdVentas}"
+					th:href="@{/sales/detalle?ov_id=} + ${fila.IdVentas} + '&cliente=' + ${fila.IdCliente} + '&total=' + ${fila.TotalVenta}"></a></td>
+					<td th:text="${fila.IdCliente}"></td>
+					<td th:text="${fila.TotalVenta}"></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		
+	</body>
+</html>

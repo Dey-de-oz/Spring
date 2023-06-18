@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+	<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title th:text="${titulo}"></title>
+	</head>
+	<body>
+		<h1 th:text="${titulo}"></h1>
+		<br>
+		<h1 th:text="'Cliente:' + ${cliente}"></h1>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Orden de venta
+					</th>
+					<th>
+						Producto
+					</th>
+					<th>
+						Subtotal
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="fila:${detalle}">
+					<td th:text="${fila.fkVenta}"></td>
+					<td th:text="${fila.producto}"></td>
+					<td th:text="${fila.precio}"></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th th:text="'Total de la venta = ' + ${total}"></th>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>
