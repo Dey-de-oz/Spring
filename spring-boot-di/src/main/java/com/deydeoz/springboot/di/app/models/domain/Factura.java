@@ -9,6 +9,19 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 
 @Component
+/*
+ * Tipos de scope:
+ * 
+ * @RequestScope:
+ * Hace que el contexto del controlador que se está macando dure lo que dura la petición HTTP
+ * Por lo tanto, cada que se cree el objeto sus atributos PostConstruct y PreDestroy
+ * Se ejecutarán hasta que cerremos la vista asociada al controlador.
+ * 
+ * @SessionScope
+ * Se utiliza para guardar datos de una sesión, tales como un carrito de compras.
+ * Los datos persisten aun cuando la petición HTTP ha finalizado. La sesión se destruye
+ * una vez que se cierra el navegador.
+ * */
 public class Factura {
 @Value("${factura.descripcion}")
 private String descripcion;
