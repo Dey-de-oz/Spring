@@ -1159,3 +1159,11 @@
 2023-06-14 13:14:03,956 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-06-14 13:14:03,967 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
 2023-06-14 13:14:03,976 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Admin\Desktop\Proyectos\Spring\spring-boot-di\src\test\resources
+2023-06-17 21:49:52,348 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-20 20:55:49,534 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-20 20:58:51,035 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-20 20:58:51,072 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2023-06-20 20:58:51,091 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Admin\Desktop\Proyectos\Spring\spring-boot-di\src\test\resources
+2023-06-20 20:58:53,935 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-20 20:58:53,966 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 8 resources from src\main\resources to target\classes
+2023-06-20 20:58:54,022 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Admin\Desktop\Proyectos\Spring\spring-boot-web\src\test\resources

@@ -37,7 +37,7 @@ public void setItem(List<ItemFactura> item) {
 @PostConstruct // Anotación que sirve para indicar una acción antes de que se cree un objeto dentro de otra clase por medio de inyección de dependencias
 public void postConstruct() {
 	//Ejemplo de anotación post construct
-	//Esta función se ejectutara antes de que se cree un objeto de tipo Factura
+	//Esta función se ejectutara cuando antes de que se cree un objeto de tipo Factura
 	cliente.setNombre(cliente.getNombre().concat(" Andres"));
 	cliente.setApellido(cliente.getApellido().concat(" de la Goya y Goya"));
 	descripcion = descripcion.concat(" del cliente");
