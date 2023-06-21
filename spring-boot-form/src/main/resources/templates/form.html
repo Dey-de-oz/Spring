@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+	<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Formulario de envio de datos</title>
+	</head>
+	<body>
+		<!-- Para utilizar un form con Thymeleaf se utiliza el metodo 
+		th:action en donde se le define la ruta del metodo del controlador al que queremos invocar
+		 -->
+		<form th:action="@{/formData}" method="post">
+			<div>
+				<label>Nombre del sujeto</label>
+				<div><input type="text" name="Iname" id="Iname"></div>
+			</div>
+			<div>
+				<label>Contraseña del sujeto</label>
+				<div><input type="password" name="Ipass" id="Ipass"></div>
+			</div>
+			<br>
+			<button type="submit">Guardar</button>
+		</form>
+	</body>
+</html>
