@@ -1,5 +1,0 @@
-package com.deydeoz.springboot.di.app;
-
-public class AppConfig {
-
-}

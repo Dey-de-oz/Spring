@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 
-	<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Formulario de envio de datos</title>
-	</head>
-	<body>
-		<!-- Para utilizar un form con Thymeleaf se utiliza el metodo 
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Formulario de envio de datos</title>
+</head>
+
+<body>
+
+	<!-- Para utilizar un form con Thymeleaf se utiliza el metodo 
 		th:action en donde se le define la ruta del metodo del controlador al que queremos invocar
 		 -->
-		<form th:action="@{/formData}" method="post">
+	<!-- Una forma ams eficiente y segura de mapear los datos de un modelo a la vista, es usando el 
+		 atributo th:object de Thymeleaf, el cual obtiene el objeto que le envia el controlador
+		 lo guarda con el nombre que se le asigna al pasar e parametro, y en Thymeleaf solo hay que
+		 utilizar el atributo object para acceder a todos los atributos de ese objeto.
+		 Una vez que se tiene el objeto, se puede sustituir el name y value de los inputs
+		 Solo se hace referencia al objeto con un * y dentro de las llaves se coloca el nombre
+		 del atributo que se quiere consultar usando el atributo th:field.
+		 -->
+	<form th:action="@{/formData2}" th:object="${usuario}" method="post">
+	<!-- Para el manejo de los errores de validación en Thymeleaf, se utiliza los atributos helper
+	que ya vienen por defecto. En este caso se utiliza #fields para acceder a los errores que se 
+	indetificaron en el controlador. Para mostrar el mensaje de error, se utiliza el atributo th:errors
+	para imprimir loq ue nos devuelve. Para hacerlo solo se referencia el atributo del objeto igualmente
+	con * y dentro delas llaves se indica el atributo-->
+		
+		
+		<div>
+			<label>Nombre del sujeto</label>
+			<!-- Se hace uso del atributo th:field para sustituir el name y el value-->
+			<div><input type="text"  id="nombre" th:field="*{nombre}"></div>
+			<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">
+		</div>
+		</div>
+		<div>
+			<label>Username</label>
+			<!-- Se hace uso del atributo th:field para sustituir el name y el value-->
+			<div><input type="text"  id="username" th:field="*{username}"></div>
+			<div th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+		</div>
+		</div>
+		<div>
+			<label>Contraseña del sujeto</label>
+			<div><input type="text" id="password" th:field="*{password}"></div>
+			<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+		</div>
+		</div>
+		<br>
+		<button type="submit">Guardar</button>
+		<!-- Una forma de mapear los datos desde el formulario a una clase modelo es, nombrando
+			cada uno de los inputs que vamos a mapear con el mismo nombre de los atributos
+			de la clase a la que se va a hacer referecia
+			<div th:if="${error != null && error.containsKey('nombre')}" th:text="${error.nombre}">	
+			</div>
+			<div th:if="${error != null && error.containsKey('password')}" th:text="${error.password}">	
+			</div>
 			<div>
 				<label>Nombre del sujeto</label>
-				<div><input type="text" name="Iname" id="Iname"></div>
+				<div><input type="text" name="nombre" id="nombre" th:value="${usuario.nombre}"></div>
 			</div>
 			<div>
 				<label>Contraseña del sujeto</label>
-				<div><input type="password" name="Ipass" id="Ipass"></div>
+				<div><input type="password" name="password" id="password"></div>
 			</div>
 			<br>
-			<button type="submit">Guardar</button>
-		</form>
-	</body>
+			<button type="submit">Guardar</button>-->
+	</form>
+</body>
+
 </html>

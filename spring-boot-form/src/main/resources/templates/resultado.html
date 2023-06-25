@@ -6,13 +6,22 @@
 		<title>Formulario de recepción de datos</title>
 	</head>
 	<body>
+		<h1 th:text="${titulo}"></h1>
 		<div>
 			<label>Nombre de usuario registrado:</label>
-			<div><h2 th:text="${usuario}"></h2></div>
+			<div><h2 th:text="${usuario.nombre}"></h2></div>
 		</div>
 		<div>
 			<label>Contraseña de usuario registrado:</label>
-			<div><h2 th:text="${password}"></h2></div>
+			<div><h2 th:text="${usuario.password}"></h2></div>
+		</div>
+		<div>
+			<label>Username registrado:</label>
+			<div><h2 th:text="${usuario.username}"></h2></div>
+		</div>
+		<div>
+			<label>ID registrado:</label>
+			<div><h2 th:text="${usuario.id}"></h2></div>
 		</div>
 	</body>
 </html>
