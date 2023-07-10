@@ -47,6 +47,11 @@
 			<div><input type="text" id="password" th:field="*{password}"></div>
 			<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
 		</div>
+		<div>
+			<label>Correo del sujeto</label>
+			<div><input type="text" id="correo" th:field="*{correo}"></div>
+			<div th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}">
+		</div>
 		</div>
 		<br>
 		<button type="submit">Guardar</button>
